@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Work Sans", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.header {
+	padding: 0 4.8rem;
+	height: 8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo {
+	height: 3rem;
+}
+
+.navbar-list {
+	display: flex;
+	gap: 4.8rem;
+	list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 500;
+	color: #0782fe;
+	transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+	color: #364fc7;
+}
+
+.mobile-navbar-btn {
+	display: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.mobile-nav-icon {
+	width: 4rem;
+	height: 4rem;
+	color: #212529;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+	display: none;
+}
+
+.logo {
+	position: relative;
+	font-size: 2.8em;
+	letter-spacing: 0.8rem;
+	color: #61c4e0;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect: below 0.1rem linear-gradient(transparent, #0004);
+	line-height: 0.7em;
+	outline: none;
+	animation: anime 5s linear infinite;
+	/* padding: 0rem 36rem 0rem 0rem; */
+	margin: 0rem 40rem 0rem 0rem;
+}
+@keyframes anime {
+	0%,
+	18%,
+	20%,
+	50.1%,
+	60%,
+	65.1%,
+	80%,
+	90.1%,
+	92% {
+		color: #0e3742;
+		box-sizing: none;
+	}
+	18%,
+	20%,
+	50.1%,
+	60%,
+	65.1%,
+	80%,
+	90.1%,
+	92%,
+	100% {
+		color: #fff;
+		text-shadow: 0 0 1rem #03bcf4, 0 0 2rem #03bcf4, 0 0 4rem #03bcf4,
+			0 0 6rem #03bcf4, 0 0 8rem #03bcf4, 0 0 1.6rem #03bcf4;
+	}
+}
+
+.search {
+	padding: 0.4rem 14rem 0.4rem 5rem;
+	margin: 0rem 10rem 0rem 10rem;
+	border: 0.1rem solid black;
+	border-radius: 4rem;
+	border: none;
+}
+
+#bgimg {
+	overflow-x: hidden;
+	width: 100%;
+	height: 60%;
+	margin: 1rem 0rem 0rem 2rem;
+}
+
+img {
+	overflow-x: hidden;
+	width: 100%;
+}
+.box {
+	overflow-x: hidden;
+	max-width: 30%;
+	height: 4%;
+	border: none;
+	margin: 2rem 1rem 1rem 1rem;
+	padding: 0.1rem 2rem 0.1rem 2rem;
+}
+
+#container {
+	display: flex;
+	width: 100%;
+	height: 50%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#container2 {
+	display: flex;
+	width: 100%;
+	height: 50%;
+	align-items: center;
+	justify-content: space-around;
+}
+footer p {
+	font-size: 1.2rem;
+	margin: 1rem 0.2rem 0.3rem 1rem;
+	padding: none;
+	text-align: center;
+}
+p {
+	font-size: 2rem;
+}
+
+@media (max-width: 62em) {
+	.mobile-navbar-btn {
+		display: block;
+		z-index: 999;
+		border: 3px solid #212529;
+		color: #212529;
+	}
+
+	.header {
+		position: relative;
+	}
+
+	.header .logo {
+		width: 10%;
+	}
+	#bgimg {
+		height: 45vh;
+	}
+	.bg {
+		width: 100%;
+		height: 40vh;
+	}
+	box {
+		margin: 2rem 0rem 4rem 0rem;
+	}
+	footer p {
+		margin: 9rem 0rem 2rem 0rem;
+	}
+	p {
+		font-size: 1.5rem;
+	}
+	.navbar {
+		width: 100%;
+		height: 100vh;
+		background: #e7f5ff;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		transform: translateX(100%);
+		transition: all 0.5s linear;
+
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+
+	.navbar-list {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.active .navbar {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+		display: block;
+	}
+
+	.active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+		display: none;
+	}
+}
+
+@media (max-width: 35em) {
+	.header {
+		padding: 0 2.4rem;
+	}
+
+	.header .logo {
+		width: 60%;
+		margin: 0rem;
+	}
+	#bgimg {
+		height: 45vh;
+	}
+	.bg {
+		width: 100%;
+		height: 30vh;
+	}
+	box {
+		margin: 8rem 0rem 4rem 0rem;
+		width: 89%;
+	}
+	p {
+		font-size: 1.5rem;
+	}
+	.only {
+		display: none;
+	}
+}
+@media (max-width: 18em) {
+	img {
+		width: 10vw;
+	}
+}
